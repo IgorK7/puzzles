@@ -1,4 +1,5 @@
 def find_anagrams(word, candidates):
+    result = []
     for i in candidates:
         count1 = 0
         # print(i)
@@ -13,8 +14,9 @@ def find_anagrams(word, candidates):
             else:
                 #print("continue")
                 break
-        if len(word) == count1:
-            return(print(i))
-    return(print("No matches"))
+        if len(i) == count1:
+            result.append(i)
+    return(result)
+    
     
 find_anagrams(word, candidates)
